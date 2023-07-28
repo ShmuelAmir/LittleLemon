@@ -8,8 +8,11 @@ class MenuItem(models.Model):
     Price = models.DecimalField(max_digits=10, decimal_places=2)
     Inventory = models.IntegerField(max_length=5)
 
+    def get_item(self):
+        return f"{self.Title} : {str(self.Price)}"
+
     def __str__(self):
-        return self.Title
+        return self.get_item()
 
 
 class Booking(models.Model):
@@ -18,5 +21,8 @@ class Booking(models.Model):
     No_of_guests = models.IntegerField(max_length=6)
     BookingDate = models.DateField()
 
+    def get_item(self):
+        return f"{self.Name} : {str(self.BookingDate)}"
+
     def __str__(self):
-        return self.Name
+        return self.get_item()
