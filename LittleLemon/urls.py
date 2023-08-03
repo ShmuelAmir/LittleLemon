@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 
-from reservation.views import BookingViewSet
+from reastaurant.views import BookingViewSet
 
 router = DefaultRouter()
 router.register(r"tables", BookingViewSet)
@@ -27,6 +27,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("auth/", include("djoser.urls")),
     path("auth/", include("djoser.urls.authtoken")),
-    path("api/", include("reservation.urls")),
+    path("restaurant/", include("reastaurant.urls")),
     path("restaurant/booking/", include(router.urls)),
 ]

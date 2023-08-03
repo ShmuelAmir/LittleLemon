@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-from reservation.models import MenuItem
+from reastaurant.models import MenuItem
 
 
 class MenuItemTest(TestCase):
