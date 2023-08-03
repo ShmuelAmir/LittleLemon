@@ -1,0 +1,2 @@
+api/
+restaurant/booking/
